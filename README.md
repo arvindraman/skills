@@ -19,5 +19,5 @@ Then in Claude Code:
 
 | Skill | Command | When to use |
 |-------|---------|-------------|
-| **agentforce-usecase** | `/agentforce-usecase` | Use this skill whenever a user wants to evaluate, score, or prioritize Agentforce use cases for an MVP implementation |
+| **agentforce-prioritization** | `/agentforce-usecase` | Use this skill whenever a user wants to evaluate, score, or prioritize Agentforce use cases for an MVP implementation |
 
