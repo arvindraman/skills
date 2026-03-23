@@ -1,5 +1,5 @@
 ---
-name: agentforce-prioritization
+name: agentforce-usecase-prioritization
 description: >
   Use this skill whenever a user wants to evaluate, score, or prioritize Agentforce use cases
   for an MVP implementation. Triggers include: any mention of Agentforce use case prioritization,
