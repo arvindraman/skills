@@ -1,4 +1,4 @@
-# Claude Code Skills (by Arvind Raman)
+# Claude Skills (by Arvind Raman)
 
 ## Skills
 
