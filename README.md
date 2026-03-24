@@ -11,21 +11,8 @@
 
 ## Installation
 
-### Method 1: Via Claude Code
 
-Clone the repo locally, then install as a Claude Code plugin:
-
-```bash
-git clone https://github.com/arvindraman/skills.git ~/.claude/plugins/skills
-```
-
-Then in Claude Code:
-
-```
-/plugin install ~/.claude/plugins/skills
-```
-
-### Method 2: Claude.ai upload
+### Method 1: Claude.ai upload
 
 Download skills as Zip File to upload and use in Claude.ai web or chat interface
 
@@ -45,4 +32,18 @@ In Claude.ai:
    - Click on + Sign and **Upload a Skill**
    - Select the ZIP file
    - Enable the skill
+
+### Method 2: Claude Code
+
+Clone the repo locally, then install as a Claude Code plugin:
+
+```bash
+git clone https://github.com/arvindraman/skills.git ~/.claude/plugins/skills
+```
+
+Then in Claude Code:
+
+```
+/plugin install ~/.claude/plugins/skills
+```
 
