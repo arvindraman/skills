@@ -1,0 +1,448 @@
+<!--
+  Agentforce Use Case Framework — Canonical HTML Template
+  
+  INSTRUCTIONS FOR USE:
+  1. Replace all {{PLACEHOLDER}} values with use-case-specific content
+  2. The persona banner section is optional — remove if no named persona exists
+  3. The quadrant badge is optional — remove or set to "Pending Assessment" if not scored
+  4. Add or remove list items in each column as needed (aim for 4-7 per section)
+  5. KPI icons should be relevant emoji — pick from: ⏱ 🤖 ⭐ 💰 📉 📈 🎯 🔄 📊 ✅ 🚀 👥
+  6. Color-coded bullets: audience=blue, data=green, actions=orange, guardrails=red, channels=purple
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentforce Use Case Framework — {{USE_CASE_TITLE}}</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+  :root {
+    --sf-blue-dark: #032D60;
+    --sf-blue-mid: #0B5CAB;
+    --sf-blue-bright: #1B96FF;
+    --sf-blue-light: #D8EDFF;
+    --sf-white: #FFFFFF;
+    --sf-green: #2E844A;
+    --sf-green-light: #E3F5E8;
+    --sf-orange: #FE9339;
+    --sf-red: #E3394D;
+    --sf-purple: #9050E9;
+    --sf-yellow: #E8B600;
+    --sf-text: #181818;
+    --sf-text-muted: #444746;
+    --radius: 12px;
+    --card-shadow: 0 2px 12px rgba(3, 45, 96, 0.10);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: linear-gradient(160deg, #032D60 0%, #0B5CAB 40%, #1B96FF 100%);
+    min-height: 100vh;
+    padding: 32px 24px;
+    color: var(--sf-text);
+  }
+
+  .framework-container {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding: 0 4px;
+  }
+
+  .header h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .header h1 span {
+    opacity: 0.7;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 8px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Quadrant badge — change background color per quadrant:
+     Very Suitable: var(--sf-green)
+     Potentially Suitable: var(--sf-orange)
+     Maybe Suitable: var(--sf-yellow)
+     Not Suitable: var(--sf-red) */
+  .quadrant-badge {
+    background: var(--sf-green);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .sf-logo {
+    width: 56px;
+    height: 40px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    overflow: hidden;
+  }
+
+  /* ===== PERSONA BANNER (optional — remove entire div if no persona) ===== */
+  .persona-banner {
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    backdrop-filter: blur(8px);
+  }
+
+  .persona-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FE9339, #FF6B6B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .persona-text {
+    color: rgba(255,255,255,0.92);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .persona-text strong { color: white; }
+
+  .persona-quote {
+    font-style: italic;
+    color: rgba(255,255,255,0.75);
+    margin-top: 4px;
+    font-size: 13px;
+  }
+
+  /* ===== CARDS ===== */
+  .card {
+    background: var(--sf-white);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+  }
+
+  .card-header {
+    background: var(--sf-blue-dark);
+    color: white;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .card-body { padding: 20px; }
+
+  /* ===== TOP ROW: Use Case + KPIs ===== */
+  .top-row {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .use-case-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #E8E6E4;
+  }
+  .use-case-row:last-child { border-bottom: none; }
+
+  .use-case-label { flex-shrink: 0; width: 80px; }
+  .use-case-label .label-main {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--sf-blue-dark);
+  }
+  .use-case-label .label-sub {
+    font-size: 11px;
+    color: var(--sf-text-muted);
+    font-style: italic;
+  }
+
+  .use-case-text {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--sf-text);
+    flex: 1;
+  }
+
+  /* KPIs */
+  .kpi-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid #E8E6E4;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .kpi-item:last-child { border-bottom: none; }
+
+  .kpi-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--sf-blue-light);
+    color: var(--sf-blue-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  /* ===== BOTTOM ROW: 5 Columns ===== */
+  .bottom-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+
+  .col-card .card-header {
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 11px;
+    letter-spacing: 1.8px;
+  }
+
+  .col-card .card-body {
+    padding: 16px;
+    min-height: 220px;
+  }
+
+  .col-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #F0EEEC;
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: var(--sf-text);
+  }
+  .col-item:last-child { border-bottom: none; }
+
+  .col-bullet {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 6px;
+  }
+
+  .audience-bullet { background: var(--sf-blue-bright); }
+  .data-bullet { background: var(--sf-green); }
+  .actions-bullet { background: var(--sf-orange); }
+  .guardrails-bullet { background: var(--sf-red); }
+  .channels-bullet { background: var(--sf-purple); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .top-row { grid-template-columns: 1fr; }
+    .bottom-row { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .bottom-row { grid-template-columns: 1fr; }
+    body { padding: 16px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="framework-container">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <h1>Use Case Framework <span>— {{USE_CASE_TITLE}}</span></h1>
+    <div class="header-right">
+      <!-- Remove or change badge as needed. Options:
+           🟩 Very Suitable (green), 🟧 Potentially Suitable (orange),
+           🟨 Maybe Suitable (yellow), 🟥 Not Suitable (red) -->
+      <div class="quadrant-badge">{{QUADRANT_EMOJI}} {{QUADRANT_LABEL}}</div>
+      <div class="sf-logo">
+        <svg viewBox="0 0 48 32" width="40" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="22" font-family="DM Sans, sans-serif" font-weight="700" font-size="10" fill="#0B5CAB">salesforce</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PERSONA BANNER (optional — delete this block if no persona) ===== -->
+  <div class="persona-banner">
+    <div class="persona-avatar">{{PERSONA_INITIAL}}</div>
+    <div>
+      <div class="persona-text"><strong>{{PERSONA_NAME}}</strong> — {{PERSONA_CONTEXT}}</div>
+      <div class="persona-quote">"{{PERSONA_QUOTE}}"</div>
+    </div>
+  </div>
+
+  <!-- ===== TOP ROW ===== -->
+  <div class="top-row">
+
+    <!-- Use Case Statement -->
+    <div class="card">
+      <div class="card-header">Use Case Statement</div>
+      <div class="card-body">
+        <div class="use-case-row">
+          <div class="use-case-label">
+            <div class="label-main">When</div>
+            <div class="label-sub">(moment)</div>
+          </div>
+          <div class="use-case-text">{{WHEN_MOMENT}}</div>
+        </div>
+        <div class="use-case-row">
+          <div class="use-case-label">
+            <div class="label-main">I Want</div>
+            <div class="label-sub">(action)</div>
+          </div>
+          <div class="use-case-text">{{I_WANT_ACTION}}</div>
+        </div>
+        <div class="use-case-row">
+          <div class="use-case-label">
+            <div class="label-main">So That</div>
+            <div class="label-sub">(goal)</div>
+          </div>
+          <div class="use-case-text">{{SO_THAT_GOAL}}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPIs — include 4-6 items -->
+    <div class="card">
+      <div class="card-header">KPIs</div>
+      <div class="card-body">
+        <!-- Repeat this block for each KPI (4-6 total) -->
+        <div class="kpi-item">
+          <div class="kpi-icon">{{KPI_ICON_1}}</div>
+          <div>{{KPI_TEXT_1}}</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-icon">{{KPI_ICON_2}}</div>
+          <div>{{KPI_TEXT_2}}</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-icon">{{KPI_ICON_3}}</div>
+          <div>{{KPI_TEXT_3}}</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-icon">{{KPI_ICON_4}}</div>
+          <div>{{KPI_TEXT_4}}</div>
+        </div>
+        <!-- Add more kpi-items as needed -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== BOTTOM ROW: 5 Columns ===== -->
+  <div class="bottom-row">
+
+    <!-- AUDIENCE -->
+    <div class="card col-card">
+      <div class="card-header">Audience</div>
+      <div class="card-body">
+        <!-- Repeat col-item for each entry (4-6 total) -->
+        <div class="col-item"><span class="col-bullet audience-bullet"></span><span>{{AUDIENCE_1}}</span></div>
+        <div class="col-item"><span class="col-bullet audience-bullet"></span><span>{{AUDIENCE_2}}</span></div>
+        <div class="col-item"><span class="col-bullet audience-bullet"></span><span>{{AUDIENCE_3}}</span></div>
+        <div class="col-item"><span class="col-bullet audience-bullet"></span><span>{{AUDIENCE_4}}</span></div>
+      </div>
+    </div>
+
+    <!-- DATA SOURCES -->
+    <div class="card col-card">
+      <div class="card-header">Data Sources</div>
+      <div class="card-body">
+        <div class="col-item"><span class="col-bullet data-bullet"></span><span>{{DATA_1}}</span></div>
+        <div class="col-item"><span class="col-bullet data-bullet"></span><span>{{DATA_2}}</span></div>
+        <div class="col-item"><span class="col-bullet data-bullet"></span><span>{{DATA_3}}</span></div>
+        <div class="col-item"><span class="col-bullet data-bullet"></span><span>{{DATA_4}}</span></div>
+        <div class="col-item"><span class="col-bullet data-bullet"></span><span>{{DATA_5}}</span></div>
+      </div>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="card col-card">
+      <div class="card-header">Actions</div>
+      <div class="card-body">
+        <div class="col-item"><span class="col-bullet actions-bullet"></span><span>{{ACTION_1}}</span></div>
+        <div class="col-item"><span class="col-bullet actions-bullet"></span><span>{{ACTION_2}}</span></div>
+        <div class="col-item"><span class="col-bullet actions-bullet"></span><span>{{ACTION_3}}</span></div>
+        <div class="col-item"><span class="col-bullet actions-bullet"></span><span>{{ACTION_4}}</span></div>
+        <div class="col-item"><span class="col-bullet actions-bullet"></span><span>{{ACTION_5}}</span></div>
+      </div>
+    </div>
+
+    <!-- GUARDRAILS -->
+    <div class="card col-card">
+      <div class="card-header">Guardrails</div>
+      <div class="card-body">
+        <div class="col-item"><span class="col-bullet guardrails-bullet"></span><span>{{GUARDRAIL_1}}</span></div>
+        <div class="col-item"><span class="col-bullet guardrails-bullet"></span><span>{{GUARDRAIL_2}}</span></div>
+        <div class="col-item"><span class="col-bullet guardrails-bullet"></span><span>{{GUARDRAIL_3}}</span></div>
+        <div class="col-item"><span class="col-bullet guardrails-bullet"></span><span>{{GUARDRAIL_4}}</span></div>
+        <div class="col-item"><span class="col-bullet guardrails-bullet"></span><span>{{GUARDRAIL_5}}</span></div>
+      </div>
+    </div>
+
+    <!-- CHANNELS -->
+    <div class="card col-card">
+      <div class="card-header">Channels</div>
+      <div class="card-body">
+        <div class="col-item"><span class="col-bullet channels-bullet"></span><span>{{CHANNEL_1}}</span></div>
+        <div class="col-item"><span class="col-bullet channels-bullet"></span><span>{{CHANNEL_2}}</span></div>
+        <div class="col-item"><span class="col-bullet channels-bullet"></span><span>{{CHANNEL_3}}</span></div>
+        <div class="col-item"><span class="col-bullet channels-bullet"></span><span>{{CHANNEL_4}}</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
