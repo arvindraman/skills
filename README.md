@@ -1,4 +1,5 @@
-# Claude Skills (to become Agentforce Ready)
+# Claude Skills 
+(can be used in Agentforce Ready Workshop)
 
 ## Skills
 
