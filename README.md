@@ -17,17 +17,17 @@
 
 Download skills as Zip File to upload and use in Claude.ai web or chat interface
 
-**Agenforce Prioritization** 
+**Agentforce Prioritization** 
 ```bash
 https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-prioritization.zip
 ```
 
-**Agenforce Worksheet** 
+**Agentforce Worksheet** 
 ```bash
 https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-worksheet.zip
 ```
 
-**Agenforce Careplan** 
+**Agentforce Careplan** 
 ```bash
 https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-careplan.zip
 ```
