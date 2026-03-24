@@ -1,5 +1,5 @@
 # Claude Skills 
-(can be used in Agentforce Ready Workshop)
+(Making Agents Matter)
 
 ## Skills
 
