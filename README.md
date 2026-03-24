@@ -1,4 +1,4 @@
-# Claude Skills (Agentforce Ready)
+# Claude Skills (to become Agentforce Ready)
 
 ## Skills
 
