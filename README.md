@@ -27,6 +27,11 @@ https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-pri
 https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-worksheet.zip
 ```
 
+**Agenforce Careplan** 
+```bash
+https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-careplan.zip
+```
+
 In Claude.ai:
    - Go to **Customize**
    - Click on **Skills**
