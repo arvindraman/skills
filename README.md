@@ -28,7 +28,7 @@ Then in Claude Code:
 ### Method 2: Claude.ai upload
 
 For use in Claude.ai web interface:
-Download skills as Zip File
+Download skills as Zip File:
 
 
 Agenforce Prioritization
@@ -36,7 +36,6 @@ Agenforce Prioritization
 https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-prioritization.zip
 ```
 
-Agenforce Worksheet
 ```bash
 https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-worksheet.zip
 ```
