@@ -1,4 +1,4 @@
-# Claude Skills (by Arvind Raman)
+# Claude Skills (Agentforce Ready)
 
 ## Skills
 
