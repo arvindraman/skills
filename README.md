@@ -27,9 +27,7 @@ Then in Claude Code:
 
 ### Method 2: Claude.ai upload
 
-For use in Claude.ai web interface:
-
-Download skills as Zip File:
+Download skills as Zip File to upload and use in Claude.ai web or chat interface
 
 Agenforce Prioritization
 ```bash
@@ -41,4 +39,10 @@ Agenforce Worksheet
 https://github.com/arvindraman/skillsdownload/raw/refs/heads/main/agentforce-worksheet.zip
 ```
 
+In Claude.ai:
+   - Go to **Customize**
+   - Click on **Skills**
+   - Click on + Sign and **Upload a Skill**
+   - Select the ZIP file
+   - Enable the skill
 
