@@ -50,5 +50,5 @@ plugin marketplace add https://github.com/arvindraman/skills.git
 
 **Step 2: Install the plugin**
 ```
-plugin install agentforce-skills
+plugin install agentforce-skills@skills
 ```
