@@ -43,13 +43,13 @@ In Claude.ai:
 
 <del>### Method 2: Claude Code</del>
 
-**Step 1: Clone the repo locally**
+<del>**Step 1: Clone the repo locally**</del>
 ```bash
 git clone https://github.com/arvindraman/skills.git ~/.claude/plugins/skills
 ```
 
 
-**Step 2: Install the plugin**
+<del>**Step 2: Install the plugin**</del>
 ```
 install ~/.claude/plugins/skills
 ```
