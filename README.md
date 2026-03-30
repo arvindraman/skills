@@ -46,7 +46,8 @@ In Claude.ai:
 ```bash
 git clone https://github.com/arvindraman/skills.git ~/.claude/plugins/skills
 ```
-
+</del>
+<del>
 **Step 2: Install the plugin**
 ```
 install ~/.claude/plugins/skills
