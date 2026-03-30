@@ -45,10 +45,10 @@ In Claude.ai:
 
 **Step 1: Add the Marketplace**
 ```bash
-claude plugins marketplace add https://github.com/arvindraman/skills.git
+plugin marketplace add https://github.com/arvindraman/skills.git
 ```
 
 **Step 2: Install the plugin**
 ```
-claude plugins install agentforce-skills
+plugin install agentforce-skills
 ```
