@@ -41,15 +41,15 @@ In Claude.ai:
    - Enable the skill
 
 
-<del>### Method 2: Claude Code</del>
+### Method 2: Claude Code<
 
-<del>**Step 1: Clone the repo locally**</del>
+<del>**Step 1: Add the Marketplace**</del>
 ```bash
-git clone https://github.com/arvindraman/skills.git ~/.claude/plugins/skills
+claude plugins marketplace add https://github.com/arvindraman/skills.git
 ```
 
 
 <del>**Step 2: Install the plugin**</del>
 ```
-install ~/.claude/plugins/skills
+claude plugins install agentforce-skills
 ```
