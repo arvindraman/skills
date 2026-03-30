@@ -1,0 +1,16 @@
+{
+  "name": "agentforce-skills",
+  "owner": {
+    "name": "Arvind Raman"
+  },
+  "metadata": {
+    "description": "Claude Code skills for Agentforce & Salesforce  (by Arvind Raman)"
+  },
+  "plugins": [
+    {
+      "name": "agentforce-skills",
+      "source": "./",
+      "description": "Claude Code skills for Agentforce & Salesforce  (by Arvind Raman)"
+    }
+  ]
+}
