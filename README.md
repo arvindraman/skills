@@ -40,9 +40,9 @@ In Claude.ai:
    - Select the ZIP file
    - Enable the skill
 
-<del>
-### Method 2: Claude Code
-</del>
+
+<del>### Method 2: Claude Code</del>
+
 **Step 1: Clone the repo locally**
 ```bash
 git clone https://github.com/arvindraman/skills.git ~/.claude/plugins/skills
