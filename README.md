@@ -41,6 +41,18 @@ In Claude.ai:
    - Enable the skill
 
 ### Method 2: Claude Code
+**Step 1: Add the marketplace**
+```
+claude plugins marketplace add https://github.com/arvindraman/skills.git
+```
+**Step 2: Install the plugin**
+```
+claude plugins install skills
+```
+Then restart Claude Code to load the new command.
+
+<details>
+<summary>Alternative: install from a local clone</summary>
 
 Clone the repo locally, then install as a Claude Code plugin:
 
@@ -51,6 +63,8 @@ git clone https://github.com/arvindraman/skills.git ~/.claude/plugins/skills
 Then in Claude Code:
 
 ```
+/plugin marketplace add ~/.claude/plugins/skills
 /plugin install ~/.claude/plugins/skills
 ```
+</details>
 
