@@ -42,14 +42,14 @@ In Claude.ai:
 
 <del>
 ### Method 2: Claude Code
+</del>
 **Step 1: Clone the repo locally**
 ```bash
 git clone https://github.com/arvindraman/skills.git ~/.claude/plugins/skills
 ```
-</del>
-<del>
+
+
 **Step 2: Install the plugin**
 ```
 install ~/.claude/plugins/skills
 ```
-</del>
